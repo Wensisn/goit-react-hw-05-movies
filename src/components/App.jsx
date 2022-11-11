@@ -16,7 +16,7 @@ const Home = lazy(() => import('../pages/Home'));
 const Movies = lazy(() => import('../pages/Movies'));
 const MovieDetails = lazy(() => import('../pages/MovieDetails'));
 
-export const App = () => {
+const App = () => {
   return (
     <>
       <HeaderBar>
@@ -38,3 +38,4 @@ export const App = () => {
     </>
   );
 };
+export default App;
