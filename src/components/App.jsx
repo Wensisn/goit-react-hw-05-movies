@@ -1,15 +1,36 @@
-import { Route, Routes } from 'react-router-dom';
-import { Home } from './Home/Home';
+import { Route, Routes, NavLink } from 'react-router-dom';
+import { Home } from '../pages/Home';
+import { Movies } from '../pages/Movies';
+import { MovieDetails } from '../pages/MovieDetails';
+import { Cast } from './Cast/Cast';
+import { Reviews } from './Reviews/Reviews';
+import {
+  HeaderBar,
+  HomeLink,
+  HomeSvg,
+  MoviesSvg,
+} from './StyleMovies/App.styled';
 
 export const App = () => {
   return (
     <>
-      <Routes basename="goit-react-hw-05-movies">
-        <Route
-          path="/"
-          element={<Home />}
-          basename="goit-react-hw-05-movies"
-        ></Route>
+      <HeaderBar>
+        <HomeLink to="/" end>
+          <HomeSvg />
+        </HomeLink>
+        <NavLink to="/movies/">
+          <MoviesSvg />
+        </NavLink>
+      </HeaderBar>
+      <Routes>
+        <Route path="/" element={<Home />} />
+
+        <Route path="/movies" element={<Movies />} />
+
+        <Route path="/movies/:movieId" element={<MovieDetails />}>
+          <Route path="cast" element={<Cast />} />
+          <Route path="reviews" element={<Reviews />} />
+        </Route>
       </Routes>
     </>
   );
