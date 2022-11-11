@@ -1,8 +1,6 @@
-import { Cast } from 'components/Cast/Cast';
-import { Reviews } from 'components/Reviews/Reviews';
 import { getMoviesInfo } from 'components/GetApi/FetchMovie';
 import { useEffect, useState } from 'react';
-import { NavLink, useParams, Link, Outlet } from 'react-router-dom';
+import { useParams, Outlet } from 'react-router-dom';
 import {
   MovieDetailsBox,
   MovieDetailsTitle,

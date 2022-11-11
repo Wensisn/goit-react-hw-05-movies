@@ -29,7 +29,7 @@ export const Reviews = () => {
               <RewiesTitle>
                 <b>{author}</b>
               </RewiesTitle>
-              <p>{content}</p>
+              <RewiesInfo>{content}</RewiesInfo>
             </CastItemInfo>
           ))}
         </CastList>

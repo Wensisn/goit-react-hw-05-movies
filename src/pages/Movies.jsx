@@ -31,13 +31,9 @@ export const Movies = () => {
   const IMAGE_URL = 'https://image.tmdb.org/t/p/w500';
 
   useEffect(() => {
-    if (searchValue === '' || searchValue === null) {
-      return;
-    }
     if (searchQuery === '' || searchQuery === null) {
       return;
     }
-
     getSeacrhMovie(searchQuery).then(setSearchValue);
   }, [searchQuery]);
 

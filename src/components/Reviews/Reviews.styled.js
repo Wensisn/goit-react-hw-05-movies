@@ -2,6 +2,8 @@ import styled from 'styled-components';
 
 export const CastList = styled.ul`
   display: flex;
+
+  justify-content: center;
   flex-wrap: wrap;
   gap: 15px;
 `;
@@ -23,7 +25,7 @@ export const RewiesInfo = styled.p`
   text-decoration: none;
   color: inherit;
   font-size: 16px;
-  color: firebrick;
+  color: #ffff;
 `;
 
 export const RewiesTitle = styled.h2`
