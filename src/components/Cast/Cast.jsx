@@ -11,7 +11,7 @@ import {
 } from './Cast.styled';
 import ImageDefault from '../Error/error.jpg';
 
-export const Cast = () => {
+const Cast = () => {
   const { movieId } = useParams();
   const [moviesCast, setMoviesCast] = useState(null);
 
@@ -50,3 +50,5 @@ export const Cast = () => {
     </>
   );
 };
+
+export default Cast;

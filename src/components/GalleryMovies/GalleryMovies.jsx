@@ -1,5 +1,6 @@
 import { fetchTrending } from '../GetApi/FetchMovie';
 import { useState, useEffect } from 'react';
+
 import {
   GalleryNav,
   GalleryList,
@@ -12,7 +13,7 @@ import {
   GalleryRating,
 } from './GalleryMovies.styled';
 
-export const GalleryMovies = () => {
+const GalleryMovies = () => {
   const [trendingMovies, setTrendingMovies] = useState([]);
   const IMAGE_URL = 'https://image.tmdb.org/t/p/w500';
 
@@ -63,3 +64,4 @@ export const GalleryMovies = () => {
     </>
   );
 };
+export default GalleryMovies;

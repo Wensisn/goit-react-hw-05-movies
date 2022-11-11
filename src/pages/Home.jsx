@@ -1,5 +1,5 @@
 import { Outlet } from 'react-router-dom';
-import { GalleryMovies } from '../components/GalleryMovies/GalleryMovies';
+import GalleryMovies from '../components/GalleryMovies/GalleryMovies';
 import { HomeBox, HomeTitle } from '../components/StyleMovies/Home.styled';
 
 const Home = () => {
