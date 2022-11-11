@@ -23,7 +23,7 @@ import {
 
 import { HomeBox } from '../components/StyleMovies/Home.styled';
 
-export const Movies = () => {
+const Movies = () => {
   const [searchValue, setSearchValue] = useState([]);
   const [searchParams, setSearchParams] = useSearchParams();
   const searchQuery = searchParams.get('query') ?? '';
@@ -84,3 +84,4 @@ export const Movies = () => {
     </>
   );
 };
+export default Movies;

@@ -12,7 +12,7 @@ import {
   MovieDetailsFormHref,
 } from '../components/StyleMovies/MovieDetails.styled';
 
-export const MovieDetails = () => {
+const MovieDetails = () => {
   const { movieId } = useParams();
   const [movieInfo, setMovieInfo] = useState(null);
 
@@ -46,3 +46,4 @@ export const MovieDetails = () => {
     </>
   );
 };
+export default MovieDetails;

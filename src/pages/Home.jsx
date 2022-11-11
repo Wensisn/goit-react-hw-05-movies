@@ -2,7 +2,7 @@ import { Outlet } from 'react-router-dom';
 import { GalleryMovies } from '../components/GalleryMovies/GalleryMovies';
 import { HomeBox, HomeTitle } from '../components/StyleMovies/Home.styled';
 
-export const Home = () => {
+const Home = () => {
   return (
     <HomeBox>
       <HomeTitle>TrendingToday</HomeTitle>
@@ -11,3 +11,4 @@ export const Home = () => {
     </HomeBox>
   );
 };
+export default Home;
