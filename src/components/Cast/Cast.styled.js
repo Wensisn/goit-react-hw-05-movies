@@ -27,11 +27,20 @@ export const InfoBox = styled.div`
   color: #fff;
 `;
 
-export const CastInfo = styled.p`
+export const CastName = styled.p`
   display: flex;
   justify-content: center;
   text-decoration: none;
   color: inherit;
   font-size: 16px;
   color: firebrick;
+`;
+
+export const CastInfo = styled.p`
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  color: inherit;
+  font-size: 16px;
+  color: #ff6b08;
 `;

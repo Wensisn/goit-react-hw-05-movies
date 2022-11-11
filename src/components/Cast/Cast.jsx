@@ -7,6 +7,7 @@ import {
   CastList,
   Image,
   CastInfo,
+  CastName,
 } from './Cast.styled';
 import ImageDefault from '../Error/error.jpg';
 
@@ -36,9 +37,9 @@ export const Cast = () => {
                   alt={original_name}
                 />
                 <InfoBox></InfoBox>
-                <CastInfo>
+                <CastName>
                   <b>{original_name}</b>
-                </CastInfo>
+                </CastName>
                 <CastInfo>{character}</CastInfo>
               </CastItemInfo>
             )
