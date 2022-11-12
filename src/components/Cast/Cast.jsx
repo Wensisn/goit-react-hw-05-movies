@@ -36,17 +36,16 @@ const Cast = () => {
                   src={avatar ? `${IMAGE_URL}${avatar}` : ImageDefault}
                   alt={original_name}
                 />
-                <InfoBox></InfoBox>
-                <CastName>
-                  <b>{original_name}</b>
-                </CastName>
-                <CastInfo>{character}</CastInfo>
+                <InfoBox>
+                  <CastName>{original_name}</CastName>
+                  <CastInfo>{character}</CastInfo>
+                </InfoBox>
               </CastItemInfo>
             )
           )}
         </CastList>
       )}
-      {moviesCast?.length === 0 && <p>There is no information</p>}
+      {moviesCast?.length === 0 && <CastName>There is no information</CastName>}
     </>
   );
 };

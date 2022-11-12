@@ -26,15 +26,15 @@ const Reviews = () => {
         <CastList>
           {moviesReviews.map(({ author, content, id }) => (
             <CastItemInfo key={id}>
-              <RewiesTitle>
-                <b>{author}</b>
-              </RewiesTitle>
+              <RewiesTitle>{author}</RewiesTitle>
               <RewiesInfo>{content}</RewiesInfo>
             </CastItemInfo>
           ))}
         </CastList>
       )}
-      {moviesReviews?.length === 0 && <p>There is no information</p>}
+      {moviesReviews?.length === 0 && (
+        <RewiesTitle>There is no information</RewiesTitle>
+      )}
     </>
   );
 };

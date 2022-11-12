@@ -1,6 +1,7 @@
 import { getMoviesInfo } from 'components/GetApi/FetchMovie';
 import { useEffect, useState } from 'react';
 import { useParams, Outlet } from 'react-router-dom';
+import { Suspense } from 'react';
 import {
   MovieDetailsBox,
   MovieDetailsTitle,
@@ -41,7 +42,9 @@ const MovieDetails = () => {
           <MovieDetailsHref to="cast">Cast</MovieDetailsHref>
           <MovieDetailsHref to="reviews">Reviews</MovieDetailsHref>
         </MovieDetailsFormHref>
-        <Outlet />
+        <Suspense fallback={<h1>BEEEEE</h1>}>
+          <Outlet />
+        </Suspense>
       </MovieDetailsBox>
     </>
   );
