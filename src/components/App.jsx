@@ -1,10 +1,10 @@
 import { Route, Routes, NavLink } from 'react-router-dom';
-// import Home from '../pages/Home';
-// import Movies from '../pages/Movies';
-// import MovieDetails from '../pages/MovieDetails';
+import Home from '../pages/Home';
+import Movies from '../pages/Movies';
+import MovieDetails from '../pages/MovieDetails';
 import Cast from './Cast/Cast';
 import Reviews from './Reviews/Reviews';
-import { lazy } from 'react';
+// import { lazy } from 'react';
 import {
   HeaderBar,
   HomeLink,
@@ -12,9 +12,9 @@ import {
   MoviesSvg,
 } from './StyleMovies/App.styled';
 
-const Home = lazy(() => import('../pages/Home'));
-const Movies = lazy(() => import('../pages/Movies'));
-const MovieDetails = lazy(() => import('../pages/MovieDetails'));
+// const Home = lazy(() => import('../pages/Home'));
+// const Movies = lazy(() => import('../pages/Movies'));
+// const MovieDetails = lazy(() => import('../pages/MovieDetails'));
 
 const App = () => {
   return (
