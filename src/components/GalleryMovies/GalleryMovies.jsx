@@ -1,6 +1,6 @@
 import { fetchTrending } from '../GetApi/FetchMovie';
 import { useState, useEffect } from 'react';
-
+import { useLocation } from 'react-router-dom';
 import {
   GalleryNav,
   GalleryList,
@@ -15,6 +15,7 @@ import {
 
 const GalleryMovies = () => {
   const [trendingMovies, setTrendingMovies] = useState([]);
+  const location = useLocation();
   const IMAGE_URL = 'https://image.tmdb.org/t/p/w500';
 
   useEffect(() => {
@@ -48,7 +49,7 @@ const GalleryMovies = () => {
               vote_average,
             }) => (
               <GalleryItem key={id}>
-                <GalleryHref to={`/movies/${id}`}>
+                <GalleryHref to={`/movies/${id}`} state={{ from: location }}>
                   <GalleryImg src={`${IMAGE_URL}${poster_path}`}></GalleryImg>
                   <GalleryTitle>{original_title}</GalleryTitle>
                   <GalleryCard>

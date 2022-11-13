@@ -8,7 +8,7 @@ const Home = () => {
     <HomeBox>
       <HomeTitle>TrendingToday</HomeTitle>
       <GalleryMovies />
-      <Suspense fallback={<h1>BEEEEE</h1>}>
+      <Suspense>
         <Outlet />
       </Suspense>
     </HomeBox>

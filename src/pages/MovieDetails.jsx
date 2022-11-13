@@ -51,7 +51,7 @@ const MovieDetails = () => {
           <MovieDetailsHref to="cast">Cast</MovieDetailsHref>
           <MovieDetailsHref to="reviews">Reviews</MovieDetailsHref>
         </MovieDetailsFormHref>
-        <Suspense fallback={<h1>BEEEEE</h1>}>
+        <Suspense>
           <Outlet />
         </Suspense>
       </MovieDetailsBox>
