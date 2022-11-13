@@ -12,7 +12,7 @@ export const CastItemInfo = styled.li`
   min-width: 320px;
   padding: 10px 15px;
   border-radius: 8px;
-  background-color: #ff6b08;
+  background-color: #655f5c;
   color: #fff;
   display: flex;
   flex-direction: column;

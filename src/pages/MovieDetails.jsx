@@ -1,6 +1,6 @@
 import { getMoviesInfo } from 'components/GetApi/FetchMovie';
 import { useEffect, useState } from 'react';
-import { useParams, Outlet } from 'react-router-dom';
+import { useParams, Outlet, useLocation } from 'react-router-dom';
 import { Suspense } from 'react';
 import {
   MovieDetailsBox,
@@ -11,11 +11,14 @@ import {
   MovieDetailsForm,
   MovieDetailsHref,
   MovieDetailsFormHref,
+  MovieDetailsBack,
 } from '../components/StyleMovies/MovieDetails.styled';
+import { AiOutlineArrowLeft } from 'react-icons/ai';
 
 const MovieDetails = () => {
   const { movieId } = useParams();
   const [movieInfo, setMovieInfo] = useState(null);
+  const location = useLocation();
 
   const IMAGE_URL = 'https://image.tmdb.org/t/p/w500';
 
@@ -28,9 +31,15 @@ const MovieDetails = () => {
   }
   const { title, overview, popularity, backdrop_path } = movieInfo;
 
+  const backLinkHref = location.state?.from ?? '/movies';
+
   return (
     <>
       <MovieDetailsBox>
+        <MovieDetailsBack to={backLinkHref}>
+          <AiOutlineArrowLeft />
+          Back
+        </MovieDetailsBack>
         <MovieDetailsTitle>Movie Information</MovieDetailsTitle>
         <MovieDetailsName>{title}</MovieDetailsName>
         <MovieDetailsForm>

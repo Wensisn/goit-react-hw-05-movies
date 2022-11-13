@@ -10,15 +10,14 @@ export const MovieInput = styled.input`
   font-family: inherit;
   font-size: 1.2rem;
   padding: 0.5rem 1rem;
-  margin-left: 22rem;
   text-align: center;
-  margin-bottom: 2rem;
 `;
 export const MovieSection = styled.div`
   padding: 1rem;
 `;
 export const MovieForm = styled.form`
   display: flex;
+  justify-content: center;
 `;
 
 export const MovieButton = styled.button`

@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 export const MovieDetailsBox = styled.div`
   width: 1280px;
@@ -51,4 +51,13 @@ export const MovieDetailsHref = styled(Link)`
 export const MovieDetailsFormHref = styled.div`
   display: flex;
   justify-content: center;
+`;
+
+export const MovieDetailsBack = styled(NavLink)`
+  display: flex;
+  align-items: center;
+  color: firebrick;
+  font-size: 30px;
+  padding: 20px;
+  text-decoration: none;
 `;

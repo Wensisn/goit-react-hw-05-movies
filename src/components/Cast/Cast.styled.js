@@ -11,6 +11,7 @@ export const CastItemInfo = styled.li`
   width: 200px;
   display: flex;
   flex-direction: column;
+  background-color: #553322;
 `;
 export const Image = styled.img`
   width: 200px;
@@ -33,7 +34,7 @@ export const CastName = styled.p`
   text-decoration: none;
   color: inherit;
   font-size: 16px;
-  color: firebrick;
+  color: #ff6b08;
 `;
 
 export const CastInfo = styled.p`
