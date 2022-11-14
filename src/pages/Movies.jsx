@@ -1,6 +1,6 @@
 import { getSeacrhMovie } from '../components/GetApi/FetchMovie';
 import { useEffect, useState } from 'react';
-import { useSearchParams } from 'react-router-dom';
+import { useLocation, useSearchParams } from 'react-router-dom';
 import {
   MovieInput,
   MovieSearch,
@@ -27,6 +27,7 @@ const Movies = () => {
   const [searchValue, setSearchValue] = useState([]);
   const [searchParams, setSearchParams] = useSearchParams();
   const searchQuery = searchParams.get('query') ?? '';
+  const location = useLocation();
 
   const IMAGE_URL = 'https://image.tmdb.org/t/p/w500';
 
@@ -40,16 +41,19 @@ const Movies = () => {
   const handleSubmit = event => {
     event.preventDefault();
     const form = event.currentTarget;
-    const value = form.elements.name.value;
+    const value = form.elements.searchQuery.value;
     setSearchParams(value !== '' ? { query: value } : {});
-    form.reset();
   };
 
   return (
     <>
       <MovieSection>
         <MovieForm onSubmit={handleSubmit}>
-          <MovieInput name="name" type="text" />
+          <MovieInput
+            name="searchQuery"
+            type="text"
+            defaultValue={searchQuery}
+          />
           <MovieButton type="submit">
             <MovieSearch />
           </MovieButton>
@@ -67,7 +71,7 @@ const Movies = () => {
                 release_date,
               }) => (
                 <GalleryItem key={id}>
-                  <GalleryHref to={`/movies/${id}`}>
+                  <GalleryHref to={`${id}`} state={{ from: location }}>
                     <GalleryImg src={`${IMAGE_URL}${poster_path}`}></GalleryImg>
                     <GalleryTitle>{original_title}</GalleryTitle>
                     <GalleryCard>

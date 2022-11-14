@@ -40,7 +40,7 @@ export const MovieDetailsForm = styled.div`
   justify-content: center;
 `;
 
-export const MovieDetailsHref = styled(Link)`
+export const MovieDetailsHref = styled(NavLink)`
   color: firebrick;
   font-size: 30px;
   padding: 20px;
@@ -53,7 +53,7 @@ export const MovieDetailsFormHref = styled.div`
   justify-content: center;
 `;
 
-export const MovieDetailsBack = styled(NavLink)`
+export const MovieDetailsBack = styled(Link)`
   display: flex;
   align-items: center;
   color: firebrick;
